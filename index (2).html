@@ -2001,40 +2001,84 @@
       </div>
     </div>
 
-    <div class="contact-form reveal" style="transition-delay:0.2s">
-      <h3 style="font-size:1.3rem;font-weight:700;color:var(--white);margin-bottom:1.5rem">أرسل لنا رسالة</h3>
-      <div class="form-row">
-        <div class="form-group" style="margin-bottom:0">
-          <label class="form-label">الاسم الكامل</label>
-          <input type="text" class="form-control" placeholder="أدخل اسمك">
-        </div>
-        <div class="form-group" style="margin-bottom:0">
-          <label class="form-label">رقم الجوال</label>
-          <input type="tel" class="form-control" placeholder="+966 5X XXX XXXX">
-        </div>
-      </div>
-      <div class="form-group" style="margin-top:1rem">
-        <label class="form-label">البريد الإلكتروني</label>
-        <input type="email" class="form-control" placeholder="example@email.com">
-      </div>
-      <div class="form-group">
-        <label class="form-label">الخدمة المطلوبة</label>
-        <select class="form-control" style="cursor:pointer">
-          <option value="" style="background:var(--ink-mid)">اختر الخدمة...</option>
-          <option style="background:var(--ink-mid)">موقع إلكتروني</option>
-          <option style="background:var(--ink-mid)">تطبيق جوال</option>
-          <option style="background:var(--ink-mid)">تصميم هوية بصرية</option>
-          <option style="background:var(--ink-mid)">استضافة مواقع</option>
-          <option style="background:var(--ink-mid)">أخرى</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label class="form-label">رسالتك</label>
-        <textarea class="form-control" placeholder="اكتب رسالتك هنا..."></textarea>
-      </div>
-      <button class="form-submit" onclick="handleSubmit(this)">إرسال الرسالة ←</button>
+    <form action="https://formspree.io/f/xojrknrn" method="POST" class="contact-form reveal contact-form-wrapper" style="transition-delay:0.2s">
+  
+  <h3 style="font-size:1.3rem;font-weight:700;color:var(--white);margin-bottom:1.5rem">
+    أرسل لنا رسالة
+  </h3>
+
+  <div class="form-row">
+    
+    <div class="form-group" style="margin-bottom:0">
+      <label for="name" class="form-label">الاسم الكامل</label>
+      <input 
+        type="text" 
+        id="name" 
+        name="name" 
+        class="form-control" 
+        required 
+        placeholder="أدخل اسمك"
+      >
     </div>
+
+    <div class="form-group" style="margin-bottom:0">
+      <label for="phone" class="form-label">رقم الجوال</label>
+      <input 
+        type="tel" 
+        id="phone" 
+        name="phone" 
+        class="form-control" 
+        placeholder="+966 5X XXX XXXX"
+      >
+    </div>
+
   </div>
+
+  <div class="form-group" style="margin-top:1rem">
+    <label for="email" class="form-label">البريد الإلكتروني</label>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      class="form-control" 
+      required 
+      placeholder="example@email.com"
+    >
+  </div>
+
+  <div class="form-group">
+    <label for="service" class="form-label">الخدمة المطلوبة</label>
+    <select 
+      id="service" 
+      name="service" 
+      class="form-control" 
+      style="cursor:pointer"
+    >
+      <option value="" style="background:var(--ink-mid)">اختر الخدمة...</option>
+      <option value="موقع إلكتروني" style="background:var(--ink-mid)">موقع إلكتروني</option>
+      <option value="تطبيق جوال" style="background:var(--ink-mid)">تطبيق جوال</option>
+      <option value="تصميم هوية بصرية" style="background:var(--ink-mid)">تصميم هوية بصرية</option>
+      <option value="استضافة مواقع" style="background:var(--ink-mid)">استضافة مواقع</option>
+      <option value="أخرى" style="background:var(--ink-mid)">أخرى</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="message" class="form-label">رسالتك</label>
+    <textarea 
+      id="message" 
+      name="message" 
+      class="form-control" 
+      required 
+      placeholder="اكتب رسالتك هنا..."
+    ></textarea>
+  </div>
+
+  <button type="submit" class="form-submit btn-primary">
+    إرسال الرسالة ←
+  </button>
+
+</form>
 </section>
 
 <!-- ═══════════════ FOOTER ═══════════════ -->
